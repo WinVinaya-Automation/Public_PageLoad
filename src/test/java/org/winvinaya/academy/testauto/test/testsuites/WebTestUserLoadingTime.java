@@ -62,7 +62,7 @@ public class WebTestUserLoadingTime extends WebTestWinVinayaAcadamyBase {
 		searchItem("WinVinaya – Learn HTML5 and CSS3 Basics - ISL");
 		courseLoadingTimeiLearn();
 		loadTime.goBack();
-		searchItem("Winvinaya- Banking ISL");
+		searchItem("WinVinaya- Banking ISL");
 		courseLoadingTimeiAccess();
 		loadTime.goBack();
 		searchItem("WinVinaya - English ISL V2.0 Course");

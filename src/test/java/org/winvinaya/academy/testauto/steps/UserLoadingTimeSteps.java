@@ -34,7 +34,7 @@ public class UserLoadingTimeSteps extends WinVinayaAcadamyWebSteps {
 		page.goBack();
 		result="PASSED";
 		}catch(Exception e) {
-			print("Gobaak is issue");
+			print("Goback is issue");
 			result="FAILED";
 		}
 	}
