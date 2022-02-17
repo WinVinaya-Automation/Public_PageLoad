@@ -59,24 +59,24 @@ public class WebTestUserLoadingTime extends WebTestWinVinayaAcadamyBase {
 		searchItem("Winvinaya- MS- Excel ISL");
 		courseLoadingTimeiAccess();
 		loadTime.goBack();
-		searchItem("WinVinaya – Learn HTML5 and CSS3 Basics - ISL");
-		courseLoadingTimeiLearn();
-		loadTime.goBack();
-		searchItem("WinVinaya- Banking ISL");
-		courseLoadingTimeiAccess();
-		loadTime.goBack();
-		searchItem("WinVinaya - English ISL V2.0 Course");
-		courseLoadingTimeiAccess();
-		loadTime.goBack();
-		searchItem("Winvinaya Soft Skills - ISL");	
-		courseLoadingTimeiLearn();
-		loadTime.goBack();
+		//searchItem("WinVinaya – Learn HTML5 and CSS3 Basics - ISL");
+		//courseLoadingTimeiLearn();
+		//loadTime.goBack();
+		//searchItem("WinVinaya- Banking ISL");
+		//courseLoadingTimeiAccess();
+		//loadTime.goBack();
+		//searchItem("WinVinaya - English ISL V2.0 Course");
+		//courseLoadingTimeiAccess();
+		//loadTime.goBack();
+		//searchItem("Winvinaya Soft Skills - ISL");	
+		//courseLoadingTimeiLearn();
+		//loadTime.goBack();
 //		searchItem("WinVinaya – Complete MySQL Developer Course in ISL");
 //		courseLoadingTimeiLearn();
 //		loadTime.goBack();
-		searchItem("WinVinaya - English - ISL Course");
-		courseLoadingTimeiAccess();
-		loadTime.goBack();
+		//searchItem("WinVinaya - English - ISL Course");
+		//courseLoadingTimeiAccess();
+		//loadTime.goBack();
 	}
 
 }
