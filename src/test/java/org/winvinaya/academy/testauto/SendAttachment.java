@@ -14,11 +14,11 @@ public class SendAttachment{
 		Date date = new Date();
 		
 		String mailSubject= "Automation testing || Academy Page || Stutent side || Loading time";
-		String mailBody= "Automation Testing Report \nStudent side page loading/refreashing time \nJob_Build_Date:"+formatter.format(date)+"\nJob_Build_Time:"+Time.format(date);
+		String mailBody= "Automation Testing Report \nStudent side page loading time \nJob_Build_Date:"+formatter.format(date)+"\nJob_Build_Time:"+Time.format(date);
 		String testReportName= "TestReport "+formatter.format(date)+".csv";
 		
 		// Recipient's email ID needs to be mentioned.
-		String to = "vigneshwaran.r@winvinayafoundation.org";
+		String to = "info@winvinayafoundation.org";
 		String cc = "vigneshwaran.r@winvinayafoundation.org,winvinayajenkins@gmail.com";
 
 		// Sender's email ID needs to be mentioned
@@ -86,7 +86,7 @@ public class SendAttachment{
 			// Send message
 			Transport.send(message);
 
-			System.out.println("Mail Sent message successfully to "+to+" with CC"+cc);
+			System.out.println("Mail Sent successfully to "+to+" with CC"+cc);
 
 		} catch (MessagingException e) {
 			throw new RuntimeException(e);
