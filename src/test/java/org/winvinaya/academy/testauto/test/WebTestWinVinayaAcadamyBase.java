@@ -3,6 +3,7 @@ package org.winvinaya.academy.testauto.test;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.winvinaya.academy.testauto.SendAttachment;
 import org.winvinaya.academy.testauto.steps.LoginSteps;
 
 public class WebTestWinVinayaAcadamyBase extends WinVinayaAcadamyWebBaseTest {
@@ -30,6 +31,8 @@ public class WebTestWinVinayaAcadamyBase extends WinVinayaAcadamyWebBaseTest {
 
 	@AfterSuite
 	public void afterMethod() {
+		SendAttachment SendAttachment = new SendAttachment();
+		SendAttachment.sendmail();
 		print("This is Winvinaya-Acadamy WebTest afterMethod");
 		if(driver!=null)
 			driver.quit();
