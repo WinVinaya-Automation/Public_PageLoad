@@ -1,9 +1,14 @@
 package org.winvinaya.academy.testauto.test.testsuites;
 
+import org.testng.annotations.Test;
 import java.io.IOException;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.winvinaya.academy.testauto.DataManager;
+import org.winvinaya.academy.testauto.SendAttachment;
 import org.winvinaya.academy.testauto.steps.UserLoadingTimeSteps;
 import org.winvinaya.academy.testauto.test.WebTestWinVinayaAcadamyBase;
 import org.wv.auto.framework.BrowserFactory;
@@ -44,11 +49,11 @@ public class WebTestUserLoadingTime extends WebTestWinVinayaAcadamyBase {
 		ilearn();
 		iPratices();
 		iAccess();
-		
+
 	}
 
 	@Test(dataProviderClass=DataManager.class, dataProvider = "browsers", groups= {"pilot"}, enabled= true, 
-			description="")
+			description="", priority=1)
 	public void AcdemyLoginTest(String row, String strBrowserName) throws IOException  {
 		driver = BrowserFactory.getBrowser(strBrowserName);
 		UserLogin(driver);
@@ -71,12 +76,14 @@ public class WebTestUserLoadingTime extends WebTestWinVinayaAcadamyBase {
 		searchItem("Winvinaya Soft Skills - ISL");	
 		courseLoadingTimeiLearn();
 		loadTime.goBack();
-//		searchItem("WinVinaya – Complete MySQL Developer Course in ISL");
-//		courseLoadingTimeiLearn();
-//		loadTime.goBack();
+		//		searchItem("WinVinaya – Complete MySQL Developer Course in ISL");
+		//		courseLoadingTimeiLearn();
+		//		loadTime.goBack();
 		searchItem("WinVinaya - English - ISL Course");
 		courseLoadingTimeiAccess();
 		loadTime.goBack();
 	}
+
+
 
 }

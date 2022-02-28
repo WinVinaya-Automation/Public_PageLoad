@@ -14,7 +14,7 @@ public class SendAttachment{
 		Date date = new Date();
 		
 		String mailSubject= "Automation testing || Academy Page || Stutent side || Loading time";
-		String mailBody= "Automation Testing Report \nStudent side page loading/refreashing time \nJob_Build_Date:"+formatter.format(date)+"\nJob_Build_Time:"+Time.format(date)+"\n*This is a auto generated mail by Jenkins Job";
+		String mailBody= "Automation Testing Report \nStudent side page loading/refreashing time \nJob_Build_Date:"+formatter.format(date)+"\nJob_Build_Time:"+Time.format(date);
 		String testReportName= "TestReport "+formatter.format(date)+".csv";
 		
 		// Recipient's email ID needs to be mentioned.

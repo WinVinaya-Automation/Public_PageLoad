@@ -2,6 +2,7 @@ package org.winvinaya.academy.testauto.test;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.winvinaya.academy.testauto.SendAttachment;
 import org.winvinaya.academy.testauto.steps.LoginSteps;
@@ -18,21 +19,20 @@ public class WebTestWinVinayaAcadamyBase extends WinVinayaAcadamyWebBaseTest {
 		login.goToURL();
 		login.loginUser();
 	}	
-	
-	
 
-//	@AfterMethod
-//	public void JenkisMail () {
-//		if(Reporter.jenkinsResult!=0) {
-////			Assert.assertTrue(Reporter.jenkinsMail==0);
-//			Assert.assertEquals(Reporter.jenkinsResult, 0, "FAILED");
-//		}
-//	}
+
+
+	//	@AfterMethod
+	//	public void JenkisMail () {
+	//		if(Reporter.jenkinsResult!=0) {
+	////			Assert.assertTrue(Reporter.jenkinsMail==0);
+	//			Assert.assertEquals(Reporter.jenkinsResult, 0, "FAILED");
+	//		}
+	//	}
+	
 
 	@AfterSuite
 	public void afterMethod() {
-		SendAttachment SendAttachment = new SendAttachment();
-		SendAttachment.sendmail();
 		print("This is Winvinaya-Acadamy WebTest afterMethod");
 		if(driver!=null)
 			driver.quit();
