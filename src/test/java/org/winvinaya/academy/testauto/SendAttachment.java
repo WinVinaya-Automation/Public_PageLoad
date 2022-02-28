@@ -9,12 +9,13 @@ import java.util.Date;
 public class SendAttachment{
 	public void sendmail(){
 		//Take current time & set format
-		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm");  
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");  
+		SimpleDateFormat Time =new SimpleDateFormat("HH:mm:ss");
 		Date date = new Date();
 		
 		String mailSubject= "Automation testing || Academy Page || Stutent side || Loading time";
-		String mailBody= "Automation test report for student side page loading time on "+formatter.format(date);
-		String testReportName= "TestReport "+formatter.format(date);
+		String mailBody= "Automation testing report \n student side page loading/refreashing time \nBuildDate:"+formatter.format(date)+"\nBuildTime:"+Time.format(date)+"* This is a auto generated mail by Jenkins Job";
+		String testReportName= "TestReport "+formatter.format(date)+".csv";
 		
 		// Recipient's email ID needs to be mentioned.
 		String to = "vigneshwaran.r@winvinayafoundation.org";
