@@ -56,13 +56,13 @@ public class WebTestUserLoadingTime extends WebTestWinVinayaAcadamyBase {
 		Reporter.writeSummary(TC+++",Verify the user login loading time, " +  loadTime.getResult());
 		loadTime.checkHomeIsExisted();
 		Reporter.writeSummary(TC+++",Verify the home button loading time, " +  loadTime.getResult());
-//		searchItem("WinVinaya – Complete MySQL Developer Course in ISL");
+		//		searchItem("WinVinaya – Complete MySQL Developer Course in ISL");
 		//		courseLoadingTimeiLearn();
 		//		loadTime.goBack();
 		searchItem("Winvinaya Soft Skills - ISL");	
 		courseLoadingTimeiLearn();
 		loadTime.goBack();
-				searchItem("WinVinaya – Learn HTML5 and CSS3 Basics - ISL");
+		searchItem("WinVinaya – Learn HTML5 and CSS3 Basics - ISL");
 		courseLoadingTimeiLearn();
 		loadTime.goBack();
 		searchItem("WinVinaya- Banking ISL");
@@ -74,7 +74,7 @@ public class WebTestUserLoadingTime extends WebTestWinVinayaAcadamyBase {
 		searchItem("Winvinaya- MS- Excel ISL");
 		courseLoadingTimeiAccess();
 		loadTime.goBack();
-		
+
 		searchItem("WinVinaya - English - ISL Course");
 		courseLoadingTimeiAccess();
 		loadTime.goBack();
