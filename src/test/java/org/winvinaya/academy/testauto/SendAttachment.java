@@ -18,7 +18,7 @@ public class SendAttachment{
 		String testReportName= "TestReport "+formatter.format(date)+".csv";
 		
 		// Recipient's email ID needs to be mentioned.
-		String to = "vigneshwaran.r@winvinayafoundation.org";
+		String to = "info@winvinayafoundation.org";
 		String cc = "vigneshwaran.r@winvinayafoundation.org,winvinayajenkins@gmail.com";
 
 		// Sender's email ID needs to be mentioned
@@ -74,7 +74,7 @@ public class SendAttachment{
 
 			// Part two is attachment
 			messageBodyPart = new MimeBodyPart();
-			String filename = "C:/ProgramData/Jenkins/.jenkins/workspace/Academy Page load/target/TestReport.csv";
+			String filename = "C:/ProgramData/Jenkins/.jenkins/workspace/AcademyPageLoadTest/target/TestReport.csv";
 			DataSource source = new FileDataSource(filename);
 			messageBodyPart.setDataHandler(new DataHandler(source));
 			messageBodyPart.setFileName(testReportName);
@@ -89,7 +89,9 @@ public class SendAttachment{
 			System.out.println("Mail Sent successfully to "+to+" with CC"+cc);
 
 		} catch (MessagingException e) {
+			
 			throw new RuntimeException(e);
+			
 		}
 	}
 }

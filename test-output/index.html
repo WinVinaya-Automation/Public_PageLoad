@@ -142,11 +142,7 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
-    &lt;listener class-name=&quot;org.uncommons.reportng.JUnitXMLReporter&quot;/&gt;
-  &lt;/listeners&gt;
+&lt;suite configfailurepolicy=&quot;continue&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;org.winvinaya.academy.testauto.test.testsuites.WebTestUserLoadingTime&quot;/&gt;
@@ -201,7 +197,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'AcdemyLoginTest')
 data.setCell(0, 2, 'org.winvinaya.academy.testauto.test.testsuites.WebTestUserLoadingTime')
-data.setCell(0, 3, 105307);
+data.setCell(0, 3, 104265);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -239,7 +235,7 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">26 ms</span>
+                <span class="method-start">29 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">AcdemyLoginTest(2, Chrome)</span>
@@ -247,11 +243,11 @@ return data;
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">105353 ms</span>
+                <span class="method-start">104317 ms</span>
               </div> <!-- configuration-suite after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">106020 ms</span>
+                <span class="method-start">105041 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
