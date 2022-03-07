@@ -13,8 +13,8 @@ public class SendAttachment{
 		SimpleDateFormat Time =new SimpleDateFormat("HH:mm:ss");
 		Date date = new Date();
 		
-		String mailSubject= "Automation testing || Academy Page || Stutent side || Loading time";
-		String mailBody= "Automation Testing Report \nStudent side page loading time \nJob_Build_Date:"+formatter.format(date)+"\nJob_Build_Time:"+Time.format(date);
+		String mailSubject= "Automation testing || Academy Page || Student side || Page Loading time";
+		String mailBody= "Automation Testing Report \nStudent side page loading time \nJob_Build_Date: "+formatter.format(date)+"\nJob_Build_Time: "+Time.format(date)+"\nPlease find the attachment";
 		String testReportName= "TestReport "+formatter.format(date)+".csv";
 		
 		// Recipient's email ID needs to be mentioned.
@@ -86,7 +86,7 @@ public class SendAttachment{
 			// Send message
 			Transport.send(message);
 
-			System.out.println("Mail Sent successfully to "+to+" with CC"+cc);
+			System.out.println("Mail Sent successfully to "+to+" with CC "+cc);
 
 		} catch (MessagingException e) {
 			

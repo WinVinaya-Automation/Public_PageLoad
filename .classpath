@@ -33,6 +33,5 @@
 	<classpathentry kind="lib" path="F:/jars/javamail-imap-1.4.2.jar"/>
 	<classpathentry kind="lib" path="F:/jars/javax.mail-1.6.2.jar"/>
 	<classpathentry kind="lib" path="F:/jars/mail.jar"/>
-	<classpathentry kind="lib" path="C:/Users/WVF-DL014/Downloads/javax.mail.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
