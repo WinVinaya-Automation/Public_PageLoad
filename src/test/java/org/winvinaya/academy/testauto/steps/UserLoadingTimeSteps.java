@@ -12,8 +12,9 @@ public class UserLoadingTimeSteps extends WinVinayaAcadamyWebSteps {
 	}
 	public void checkHomeIsExisted() {
 		try{result="FAILED";
-		page.checkHomeIsExisted();
-		result="PASSED";
+		if(page.checkHomeIsExisted()==true) {
+			result="PASSED";
+		}
 		}catch(Exception e) {
 			print("Dashboard page is yet to opened!");
 			result="FAILED";
@@ -21,48 +22,64 @@ public class UserLoadingTimeSteps extends WinVinayaAcadamyWebSteps {
 	}
 	public void searchItem(String CourseName) {
 		try{result="FAILED";
-		page.searchItem(CourseName);
-		result="PASSED";
+		if(page.searchItem(CourseName)==true) {
+			result="PASSED";
+		}
 		}catch(Exception e) {
 			print("search a course is issue");
 			result="FAILED";
 		}
 	}
-	
+
 	public void goBack() {
-		try{result="FAILED";
-		page.goBack();
-		result="PASSED";
+		try{
+			if(result.equalsIgnoreCase("PASSED")){
+				page.goBack();
+				result="PASSED";
+			}
+			result="FAILED";
 		}catch(Exception e) {
 			print("Goback is issue");
 			result="FAILED";
 		}
 	}
-	
+
 	public void clickiLearnItem() {
-		try{result="FAILED";
-		page.clickiLearnItem();
-		result="PASSED";
+		try{
+			if(result.equalsIgnoreCase("PASSED")){
+				result="FAILED";
+				page.clickiLearnItem();
+				result="PASSED";
+			}
+			result="FAILED";
 		}catch(Exception e) {
 			print("open iLearn is issue");
 			result="FAILED";
 		}
 	}
-	
+
 	public void clickiPreteiceItem() {
-		try{result="FAILED";
-		page.clickiPreteiceItem();
-		result="PASSED";
+		try{
+			if(result.equalsIgnoreCase("PASSED")){
+				result="FAILED";
+				page.clickiPreteiceItem();
+				result="PASSED";
+			}
+			result="FAILED";
 		}catch(Exception e) {
 			print("open iPratice is issue");
 			result="FAILED";
 		}
 	}
-	
+
 	public void clickiAccessItem() {
-		try{result="FAILED";
-		page.clickiAccessItem();
-		result="PASSED";
+		try{
+			if(result.equalsIgnoreCase("PASSED")){
+				result="FAILED";
+				page.clickiAccessItem();
+				result="PASSED";
+			}
+			result="FAILED";
 		}catch(Exception e) {
 			print("open iAccess is issue");
 			result="FAILED";

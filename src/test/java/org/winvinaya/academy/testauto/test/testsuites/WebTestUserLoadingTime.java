@@ -13,7 +13,7 @@ import org.wv.auto.framework.utils.Reporter;
 public class WebTestUserLoadingTime extends WebTestWinVinayaAcadamyBase {
 	public static int TC;
 	UserLoadingTimeSteps loadTime;
-	public void searchItem(String courseName) {
+	public void  searchItem(String courseName) {
 		loadTime.searchItem(courseName);
 		Reporter.writeSummary(TC++ +",Verify the "+courseName+" loading time, " +  loadTime.getResult());
 	}
