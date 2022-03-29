@@ -34,8 +34,8 @@ public class WinVinayaAcadamyWebBaseTest extends BaseTest {
 	public void afterSuite() {
 		Reporter.closeReports();
 		//Added a code for manually sending a report mail
-//		SendAttachment mail =new SendAttachment();
-//		mail.sendmail();
+		SendAttachment mail =new SendAttachment();
+		mail.sendmail();
 	}
 	
 
