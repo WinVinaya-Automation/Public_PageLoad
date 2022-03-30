@@ -116,7 +116,7 @@ public class Reporter {
 	public static void closeReports() {
 		//Added on 30-March-2022
 		//for network speed
-		String []speed = ",,NETWORK_SPEED (MB/S),,,CHECKED ON,".split(",");
+		String []speed = ",,NETWORK_SPEED (MB/S),,,CHECKED AT,".split(",");
 		String result=",,"+CheckInternetSpeed.getSpeed+",,,"+TimeManager.getCurrentDateTime();
 		String [] speedwrite=result.split(",");
 		repWriter.writeNext(speed);	

@@ -24,7 +24,7 @@ public class WebTestUserLoadingTime extends WebTestWinVinayaAcadamyBase {
 	public void iPratices() {
 		loadTime.clickiPreteiceItem();
 		loadTime.goBack();
-		Reporter.writeSummary(TC+++",Verify the sub topic opening in iPretice loading time, " +  loadTime.getResult());
+		Reporter.writeSummary(TC+++",Verify the sub topic opening in iPractice loading time, " +  loadTime.getResult());
 	}
 	public void iAccess() {
 		loadTime.clickiAccessItem();
