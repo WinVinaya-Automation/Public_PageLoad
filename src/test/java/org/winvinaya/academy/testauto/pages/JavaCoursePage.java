@@ -12,7 +12,7 @@ public class JavaCoursePage extends WinVinayaAcadamyWebBasePage {
 	//added on 29-Jan-22
 	public By homeLogo=By.xpath("(//a)[1]");
 	public JavaCoursePage(WebDriver driver) {
-		super(driver);
+		super(driver);   
 	}
 
 	//Weather checking the course is working or not
