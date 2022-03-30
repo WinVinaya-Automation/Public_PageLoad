@@ -37,6 +37,4 @@ public class WinVinayaAcadamyWebBaseTest extends BaseTest {
 		SendAttachment mail =new SendAttachment();
 		mail.sendmail();
 	}
-	
-
 }

@@ -4,7 +4,6 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 import org.winvinaya.academy.testauto.DataManager;
-import org.winvinaya.academy.testauto.SendAttachment;
 import org.winvinaya.academy.testauto.steps.UserLoadingTimeSteps;
 import org.winvinaya.academy.testauto.test.WebTestWinVinayaAcadamyBase;
 import org.wv.auto.framework.BrowserFactory;
@@ -79,8 +78,6 @@ public class WebTestUserLoadingTime extends WebTestWinVinayaAcadamyBase {
 		searchItem("WinVinaya - English - ISL Course");
 		courseLoadingTimeiAccess();
 		loadTime.goBack();
-	}
-
-
+		 	}
 
 }

@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.winvinaya.academy.testauto.WinVinayaAcadamyWebBasePage;
 
 public class LoginPage extends WinVinayaAcadamyWebBasePage {
-	//Opened by Ramya
 	public By usernameFloat=By.xpath("//*[text()='Email or Username *']");
 	public By passwordFloat=By.xpath("//*[text()='Password *']");
 	public By userName=By.xpath("//input[@id='username']");
@@ -23,7 +22,7 @@ public class LoginPage extends WinVinayaAcadamyWebBasePage {
 	public void LoginTrinee() {
 		goTo(getLabel("URL"));
 		click(usernameFloat);
-//				enterData("winvinayademouser01",userName);
+		//				enterData("winvinayademouser01",userName);
 		enterData("baskaran.arumugam@winvinaya.com",userName);
 		wait(2);
 		click(passwordFloat);

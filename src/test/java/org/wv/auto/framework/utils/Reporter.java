@@ -2,6 +2,8 @@ package org.wv.auto.framework.utils;
 
 import java.io.IOException;
 
+import org.winvinaya.academy.testauto.CheckInternetSpeed;
+
 import com.opencsv.CSVWriter;
 
 public class Reporter {
@@ -18,7 +20,6 @@ public class Reporter {
 	}
 
 	public static void createReport() {
-
 		// This will create the report file call this before start of testing
 		String reportFile = "target/TestReport.csv";
 		if (repWriter == null)
@@ -64,14 +65,12 @@ public class Reporter {
 	private static void writeFailureHeader() {
 		// Create record
 		String[] record = "Browser/App, Environment, TCID, TEST DESCRIPTION, TEST RESULT ,TIME TAKEN(SEC),TIME STAMP".split(",");
-	
 		// Write the record to file
 		if (repWriterFailure != null)
 			repWriterFailure.writeNext(record);
 	}
 
 	public static void writeSummary(String strLine) {
-
 		String strReportWithBrowserEnvDetails = strBrowserAppOS + "," + strEnv + "," + strLine+","+TimeManager.getTimeDiffFromPrevEventInSecs()+","+TimeManager.getCurrentDateTime();
 		TimeManager.setTimeAtEvent();
 		// This is report test result
@@ -80,7 +79,7 @@ public class Reporter {
 		if (strReportWithBrowserEnvDetails.contains("FAILED"))
 			writeFailure(strReportWithBrowserEnvDetails);
 	}
-	
+
 	public static void writeSummary(String strLine,String TimeTaken,String TimeStamp) {
 		String strReportWithBrowserEnvDetails = strBrowserAppOS + "," + strEnv + "," + strLine+","+TimeTaken+","+TimeStamp;
 
@@ -106,6 +105,7 @@ public class Reporter {
 	public static void closeReport() {
 		if (repWriter != null)
 			try {
+				
 				repWriter.close();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -114,6 +114,14 @@ public class Reporter {
 	}
 
 	public static void closeReports() {
+		//Added on 30-March-2022
+		//for network speed
+		String []speed = ",,NETWORK_SPEED (MB/S),,,CHECKED ON,".split(",");
+		String result=",,"+CheckInternetSpeed.getSpeed+",,,"+TimeManager.getCurrentDateTime();
+		String [] speedwrite=result.split(",");
+		repWriter.writeNext(speed);	
+		repWriter.writeNext(speedwrite);
+		//ends
 		closeReport(repWriter);
 		closeReport(repWriterDetail);
 		closeReport(repWriterFailure);
@@ -133,5 +141,5 @@ public class Reporter {
 		strBrowserAppOS = strBrwAppOS;
 	}
 
-	
+
 }

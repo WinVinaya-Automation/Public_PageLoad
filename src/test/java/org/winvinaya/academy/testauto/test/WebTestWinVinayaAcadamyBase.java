@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.winvinaya.academy.testauto.CheckInternetSpeed;
 import org.winvinaya.academy.testauto.SendAttachment;
 import org.winvinaya.academy.testauto.steps.LoginSteps;
 
@@ -11,8 +12,11 @@ public class WebTestWinVinayaAcadamyBase extends WinVinayaAcadamyWebBaseTest {
 	@BeforeMethod
 	public void beforeMethod() {
 		print("This is Winvinaya-Acadamy WebSite Load Test beforeMethod");
+
 	}
 	protected void UserLogin(WebDriver driver)  {
+		CheckInternetSpeed speed=new CheckInternetSpeed(driver);
+		speed.checkspeed();
 		print("Inside testLogin");
 		LoginSteps login = new LoginSteps(driver);
 		print("Inside testLogin - Page Opened");
@@ -29,7 +33,7 @@ public class WebTestWinVinayaAcadamyBase extends WinVinayaAcadamyWebBaseTest {
 	//			Assert.assertEquals(Reporter.jenkinsResult, 0, "FAILED");
 	//		}
 	//	}
-	
+
 
 	@AfterSuite
 	public void afterMethod() {
