@@ -14,9 +14,11 @@ public class WebTestUserLoadingTime extends WebTestWinVinayaAcadamyBase {
 	UserLoadingTimeSteps loadTime;
 	public void  searchItem(String courseName) {
 		loadTime.searchItem(courseName);
-		Reporter.writeSummary(TC++ +",Verify the "+courseName+" loading time, " +  loadTime.getResult());
-		if(TC>4){
+		if(TC>3){
 			Reporter.writeSummary(TC++ +",NEXT COURSE - Verify the "+courseName+" loading time, " +  loadTime.getResult());
+		}
+		else {
+			Reporter.writeSummary(TC++ +",Verify the "+courseName+" loading time, " +  loadTime.getResult());
 		}
 	}
 	public void ilearn() {
@@ -59,12 +61,12 @@ public class WebTestUserLoadingTime extends WebTestWinVinayaAcadamyBase {
 		Reporter.writeSummary(TC+++",Verify the user login loading time, " +  loadTime.getResult());
 		loadTime.checkHomeIsExisted();
 		Reporter.writeSummary(TC+++",Verify the clicking action of home button and the loading time of Home page (View All courses button), " +  loadTime.getResult());
-//		searchItem("WinVinaya – Complete MySQL Developer Course in ISL");
-//		courseLoadingTimeiLearn();
-//		loadTime.goBack();
-//		searchItem("Winvinaya Soft Skills - ISL");	
-//		courseLoadingTimeiLearn();
-//		loadTime.goBack();
+		//		searchItem("WinVinaya – Complete MySQL Developer Course in ISL");
+		//		courseLoadingTimeiLearn();
+		//		loadTime.goBack();
+		//		searchItem("Winvinaya Soft Skills - ISL");	
+		//		courseLoadingTimeiLearn();
+		//		loadTime.goBack();
 		searchItem("WinVinaya – Learn HTML5 and CSS3 Basics - ISL");
 		courseLoadingTimeiLearn();
 		loadTime.goBack();
