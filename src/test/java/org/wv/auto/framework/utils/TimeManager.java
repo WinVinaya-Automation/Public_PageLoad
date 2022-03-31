@@ -41,8 +41,9 @@ public class TimeManager {
 	public static String getTimeDiffFromPrevEventInSecs() {
 		// get time difference in seconds
 		long milliseconds = getCurrententTimeStamp().getTime() - timeAtEvent.getTime();
-		int centiseconds = (int) milliseconds / 10;
-		Short seconds = new Short((short) (centiseconds/100));
-		return seconds.toString();
+		double centiseconds = (int) milliseconds / 10;
+		double seconds = ((centiseconds/100));
+		String str = Double.toString(seconds);
+		return str;
 	}
 }
