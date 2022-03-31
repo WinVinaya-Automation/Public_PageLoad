@@ -44,7 +44,7 @@ public class LoginPage extends WinVinayaAcadamyWebBasePage {
 	/* Function Name: loginUser();
 	 * Purpose: Login the User
 	 */
-	public void loginUser() {
+	public boolean loginUser() {
 		click(usernameFloat);
 		enterData("winvinayademouser01",userName);
 		wait(2);
@@ -52,5 +52,9 @@ public class LoginPage extends WinVinayaAcadamyWebBasePage {
 		enterData("winvinaya",password);
 		wait(2);
 		click(btnLogin);
+		if(elementExist(homeLogo)) {
+			return true;
+		}
+		return false;
 	}
 }

@@ -31,15 +31,19 @@ public class LoginSteps extends WinVinayaAcadamyWebSteps {
 			print("URL doesn't open" + e);
 		}
 	}
-	
+
 	/* Function Name: loginUser();
 	 * Purpose: Login the User
 	 */
 	public void loginUser() {
+		result="FAILED";
 		try {
-			login.loginUser();
+			if(login.loginUser()==true) {
+				result="PASSED";
+			}
 		}catch (Exception e) {
 			print("User login issue" + e);
+			result="FAILED";
 		}
 	}
 }

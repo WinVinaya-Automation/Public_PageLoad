@@ -6,7 +6,7 @@ import org.winvinaya.academy.testauto.pages.UserLoadingTimePages;
 
 public class UserLoadingTimeSteps extends WinVinayaAcadamyWebSteps {
 	UserLoadingTimePages  page=null;
-
+public static boolean check=false;
 	public UserLoadingTimeSteps(WebDriver driver) {
 		page=new UserLoadingTimePages(driver);
 	}
@@ -24,6 +24,7 @@ public class UserLoadingTimeSteps extends WinVinayaAcadamyWebSteps {
 		try{result="FAILED";
 		if(page.searchItem(CourseName)==true) {
 			result="PASSED";
+			check=true;
 		}
 		}catch(Exception e) {
 			print("search a course is issue");
@@ -40,13 +41,12 @@ public class UserLoadingTimeSteps extends WinVinayaAcadamyWebSteps {
 	}
 
 	public void clickiLearnItem() {
+		result="FAILED";
 		try{
-			if(result.equalsIgnoreCase("PASSED")){
-				result="FAILED";
+			if(check==true){
 				page.clickiLearnItem();
 				result="PASSED";
 			}
-			result="FAILED";
 		}catch(Exception e) {
 			print("open iLearn is issue");
 			result="FAILED";
@@ -54,13 +54,12 @@ public class UserLoadingTimeSteps extends WinVinayaAcadamyWebSteps {
 	}
 
 	public void clickiPreteiceItem() {
+		result="FAILED";
 		try{
-			if(result.equalsIgnoreCase("PASSED")){
-				result="FAILED";
+			if(check==true){
 				page.clickiPreteiceItem();
 				result="PASSED";
 			}
-			result="FAILED";
 		}catch(Exception e) {
 			print("open iPratice is issue");
 			result="FAILED";
@@ -68,13 +67,12 @@ public class UserLoadingTimeSteps extends WinVinayaAcadamyWebSteps {
 	}
 
 	public void clickiAccessItem() {
+		result="FAILED";
 		try{
-			if(result.equalsIgnoreCase("PASSED")){
-				result="FAILED";
+			if(check==true){
 				page.clickiAccessItem();
 				result="PASSED";
 			}
-			result="FAILED";
 		}catch(Exception e) {
 			print("open iAccess is issue");
 			result="FAILED";

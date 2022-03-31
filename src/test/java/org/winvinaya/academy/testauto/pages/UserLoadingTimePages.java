@@ -11,16 +11,18 @@ public class UserLoadingTimePages extends WinVinayaAcadamyWebBasePage{
 	public By ilearnItem=By.xpath("((//*[@class='flex-col-layout'])[1]//div)[1]//div[@class='bottom-section']//a");
 	public By ipracticeItem=By.xpath("((//*[@class='flex-col-layout'])[2]//div)[1]//div[@class='bottom-section']//a");
 	public By iassessItem=By.xpath("((//*[@class='flex-col-layout'])[3]//div)[1]//div[@class='bottom-section']//a");
+	public By lblViewAllCourse=By.xpath("//*[text()='View All Courses']");
 	public UserLoadingTimePages(WebDriver driver) {
 		super(driver);
 	}
 	public boolean checkHomeIsExisted() {
 		if(elementExist(homeLogo)) {
 			click(homeLogo);
-			return true;
-		}else {
-			return false;
-		}
+			if(elementExist(lblViewAllCourse)) {
+				return true;
+			}
+		}		
+		return false;
 	}
 
 	/*
@@ -28,15 +30,15 @@ public class UserLoadingTimePages extends WinVinayaAcadamyWebBasePage{
 	 */
 	public boolean searchItem(String courseName) {
 		if(elementExist(searchTab)) {
-		wait(3);
+			wait(3);
 			enterData(courseName,searchTab); 
 			driver.findElement(searchTab).sendKeys(Keys.RETURN);
-//			driver.findElement(searchTab).sendKeys(Keys.RETURN);
+			//			driver.findElement(searchTab).sendKeys(Keys.RETURN);
 			By courseXpath=By.xpath("//*[@class='course-item-head']//*[contains(text(),'"+courseName+"')]");
 			moveElementFocusandClick(courseXpath);
 			return true;
 		}
-			return false;
+		return false;
 	}
 
 	public void clickiLearnItem() {
