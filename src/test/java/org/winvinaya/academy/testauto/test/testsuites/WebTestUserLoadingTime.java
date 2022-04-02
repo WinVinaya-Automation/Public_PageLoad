@@ -83,5 +83,4 @@ public class WebTestUserLoadingTime extends WebTestWinVinayaAcadamyBase {
 		courseLoadingTimeiAccess();
 		loadTime.goBack();
 	}
-
 }
