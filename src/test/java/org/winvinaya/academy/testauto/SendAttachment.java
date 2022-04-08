@@ -75,7 +75,7 @@ public class SendAttachment{
 
 			// Part two is attachment
 			messageBodyPart = new MimeBodyPart();
-			String filename = "C:/ProgramData/Jenkins/.jenkins/workspace/AcademyPageLoadTest/target/TestReport.csv";
+			String filename = "target/TestReport.csv";
 			DataSource source = new FileDataSource(filename);
 			messageBodyPart.setDataHandler(new DataHandler(source));
 			messageBodyPart.setFileName(testReportName);
