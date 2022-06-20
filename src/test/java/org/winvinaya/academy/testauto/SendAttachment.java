@@ -18,9 +18,9 @@ public class SendAttachment{
 		String testReportName= "TestReport "+formatter.format(date)+".csv";
 		
 		// Recipient's email ID needs to be mentioned.
-		String to = "info@winvinayafoundation.org";
-//		String to = "vigneshwaran.r@winvinayafoundation.org";
-		String cc = "vigneshwaran.r@winvinayafoundation.org,ann.jannet@winvinayafoundation.org";
+//		String to = "info@winvinayafoundation.org";
+		String to = "vigneshwaran.r@winvinayafoundation.org";
+//		String cc = "vigneshwaran.r@winvinayafoundation.org,ann.jannet@winvinayafoundation.org";
 
 		// Sender's email ID needs to be mentioned
 		String from = "winvinayajenkins@gmail.com";

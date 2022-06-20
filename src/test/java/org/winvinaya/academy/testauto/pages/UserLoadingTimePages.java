@@ -60,6 +60,4 @@ public class UserLoadingTimePages extends WinVinayaAcadamyWebBasePage{
 		driver.navigate().back();
 	}
 
-
-
 }
